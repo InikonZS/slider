@@ -53,6 +53,7 @@ var mouseUpHandler = (e)=>{
 
 document.addEventListener('mouseup',mouseUpHandler);
 document.addEventListener('touchend',mouseUpHandler);
+document.addEventListener('touchcancel',mouseUpHandler);
 
 document.addEventListener('drag',(e)=>{ 
     sliderRefresh();
