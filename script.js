@@ -25,7 +25,13 @@ slider.addEventListener('touchstart', mouseDownHandler);
 
 var mouseMoveHandler = (e)=>{
         if (dragStartEvent){
-            move=(e.clientX-dragStartEvent.clientX);
+            if (e.touches){
+                if (e.touches[0]) {
+                    move=(e.touches[0].clientX-dragStartEvent.touches[0].clientX);
+                }
+            } else {
+                move=(e.clientX-dragStartEvent.clientX);
+            }
             
             slides[cycle(sliderPosition-1,slides.length)].style = 'transform: translateX('+(move+slides[cycle(sliderPosition,slides.length)].clientWidth)+'px);';
             slides[cycle(sliderPosition,slides.length)].style = 'transform: translateX('+(move)+'px);';
