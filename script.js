@@ -15,13 +15,15 @@ buttonClickLeft();
 buttonClickRight();
 var dragStartEvent;
 var move=0;
-var lock=false;
-slider.addEventListener('mousedown',(e)=>{
+var mouseDownHandler = (e)=>{
     if (!e.target.classList.contains("button")){
         dragStartEvent=e;
     } else {move=0;}
-});
-document.addEventListener('mousemove',(e)=>{
+};
+slider.addEventListener('mousedown', mouseDownHandler);
+slider.addEventListener('touchstart', mouseDownHandler);
+
+var mouseMoveHandler = (e)=>{
         if (dragStartEvent){
             move=(e.clientX-dragStartEvent.clientX);
             
@@ -29,9 +31,11 @@ document.addEventListener('mousemove',(e)=>{
             slides[cycle(sliderPosition,slides.length)].style = 'transform: translateX('+(move)+'px);';
             slides[cycle(sliderPosition+1,slides.length)].style = 'transform: translateX('+(move-slides[cycle(sliderPosition,slides.length)].clientWidth)+'px);';
         }
-});
+}
+document.addEventListener('mousemove', mouseMoveHandler);
+document.addEventListener('touchmove', mouseMoveHandler);
 
-document.addEventListener('mouseup',(e)=>{
+var mouseUpHandler = (e)=>{
     if (dragStartEvent) {
         if (move<-100){ 
             buttonClickRight();
@@ -45,11 +49,18 @@ document.addEventListener('mouseup',(e)=>{
          
     }
     dragStartEvent=undefined; 
-});
+}
+
+document.addEventListener('mouseup',mouseUpHandler);
+document.addEventListener('touchend',mouseUpHandler);
+
 document.addEventListener('drag',(e)=>{ 
     sliderRefresh();
     //slides[cycle(sliderPosition,slides.length)].style = 'transition-property: transform; transition-duration:400ms; transform: translateX('+(0)+'px);';
     dragStartEvent=undefined; 
+});
+document.addEventListener('dragstart',(e)=>{ 
+    e.preventDefault();
 });
 
 function cycle(pos,max){
