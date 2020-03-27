@@ -8,8 +8,12 @@
         <link rel="stylesheet" href="contact.css">
     </head>
     <body>
+        <a class="anch"  name="header"></a>
         <div class="wrapper">
+            <div class="header_space"></div>
+
             <div class="header">
+                
                 <div class="burger_menu">
                     <div class="burger_menu_item">
                             <a href="#header">HOME</a>
@@ -58,8 +62,15 @@
                 <div class="slider_wrapper">
                     <div class="slide slide1">
                         <div class="slide_container slide_container_1">
-                            <div><img src="assets/slider/phone_v.png"></div>
-                            <div><img src="assets/slider/phone_h.png"></div>
+                            <div>
+                                <img class="sw" id="tv1" src="assets/slider/phone_v.png">
+                                <img style="display:none;" class="sw" id="tv1-off" src="assets/slider/phone_v_black.png">
+                            </div>
+                            <div> 
+                                <img class="sw" id="tv2" src="assets/slider/phone_h.png">
+                                <img style="display:none;" class="sw" id="tv2-off" src="assets/slider/phone_h_black.png">
+                            </div>
+                            
                         </div> 
                     </div>
                     <div class="slide slide2">
@@ -108,56 +119,56 @@
                         </div>
 
                         <div class="services_grid_item">
-                            <div class="ico pic-pen"></div>
+                            <div class="ico pic-bulb"></div>
                             <div class="services_item_describe">
-                                <h3>Custom Design</h3>
+                                <h3>Innovative Ideas</h3>
                                 <p class="small-text"> 
-                                    Curabitur vestibulum eget mauris quis laoreet. Phasellus in quam laoreet, 
-                                    viverra lacus ut, ultrices velit.
+                                    Quisque luctus, quam eget molestie commodo, lacus purus cursus purus, 
+                                    nec rutrum tellus dolor id lorem.
                                 </p>
                             </div>
                         </div>
 
                         <div class="services_grid_item">
-                            <div class="ico pic-pen"></div>
+                            <div class="ico pic-heart"></div>
                             <div class="services_item_describe">
-                                <h3>Custom Design</h3>
+                                <h3>Love Is The Answer</h3>
                                 <p class="small-text"> 
-                                    Curabitur vestibulum eget mauris quis laoreet. Phasellus in quam laoreet, 
-                                    viverra lacus ut, ultrices velit.
+                                    Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis. Quisque condimentum.
+                                    Scolara Visari 
                                 </p>
                             </div>
                         </div>
 
                         <div class="services_grid_item">
-                            <div class="ico pic-pen"></div>
+                            <div class="ico pic-phone"></div>
                             <div class="services_item_describe">
-                                <h3>Custom Design</h3>
+                                <h3>Responsive Layout</h3>
                                 <p class="small-text"> 
-                                    Curabitur vestibulum eget mauris quis laoreet. Phasellus in quam laoreet, 
-                                    viverra lacus ut, ultrices velit.
+                                    Sed porttitor placerat rhoncus. In at nunc tellus. Maecenas 
+                                    blandit nunc ligula. Praesent elit leo.
                                 </p>
                             </div>
                         </div>
 
                         <div class="services_grid_item">
-                            <div class="ico pic-pen"></div>
+                            <div class="ico pic-bubble"></div>
                             <div class="services_item_describe">
-                                <h3>Custom Design</h3>
+                                <h3>24/7 Support</h3>
                                 <p class="small-text"> 
-                                    Curabitur vestibulum eget mauris quis laoreet. Phasellus in quam laoreet, 
-                                    viverra lacus ut, ultrices velit.
+                                    Vivamus vel quam lacinia, tincidunt dui non, vehicula nisi. 
+                                    Nulla a sem erat. Pellentesque egestas venenatis lorem.
                                 </p>
                             </div>
                         </div>
 
                         <div class="services_grid_item">
-                            <div class="ico pic-pen"></div>
+                            <div class="ico pic-star"></div>
                             <div class="services_item_describe">
-                                <h3>Custom Design</h3>
+                                <h3>Feel Like A Star</h3>
                                 <p class="small-text"> 
-                                    Curabitur vestibulum eget mauris quis laoreet. Phasellus in quam laoreet, 
-                                    viverra lacus ut, ultrices velit.
+                                    Quisque hendrerit purus dapibus, ornare nibh vitae, viverra nibh. 
+                                    Fusce vitae aliquam tellus. 
                                 </p>
                             </div>
                         </div>
@@ -298,6 +309,7 @@
 
                 <div id="md-back" class="modal-window-background" style="display:none;"> 
                     </div>
+                <div id="md-w" class="modal-window" style="display:none;">
                     <div id="md-wrp" class="modal-window-wrapper" style="display:none;">
                         <p class="big-text" style="color: #ffffff">
                             Письмо отправлено
@@ -316,7 +328,7 @@
                         </p>
                         <button class="inp snd modal-window-button" value="Send" onclick="modButtonClick()" >ОК</button>
                     </div>
-
+                </div>
 
                     <div class="contact">
                         <div class="contact_wrapper">

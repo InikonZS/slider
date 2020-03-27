@@ -110,6 +110,17 @@ h3{
     background-position-y: center;
     background-position-x: center;
     background-image: url(assets/mobile/burger.png);
+    position: relative;
+    z-index: 100;
+    transform: rotateZ(0deg);
+    transition-duration: 300ms;
+    transition-property: transform;
+}
+.burger_selected{
+    transform: rotateZ(90deg);
+    transition-duration: 300ms;
+    transition-property: transform;
+
 }
 @media screen and (max-width:455px){
     .burger{
