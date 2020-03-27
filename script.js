@@ -1,5 +1,6 @@
 var slider = document.querySelector(".slider");
 var slides = document.querySelectorAll(".slide");
+var slideContainers = document.querySelectorAll(".slide_container");
 var sliderWrapper = document.querySelector(".slider_wrapper")
 var buttonLeft = document.querySelector("#button_left");
 var buttonRight = document.querySelector("#button_right");
@@ -7,7 +8,10 @@ var sliderPosition=0;
 
 buttonLeft.addEventListener("click", buttonClickLeft);
 buttonRight.addEventListener("click", buttonClickRight);
-var sliderResize = ()=>{slider.style.height=(slider.clientWidth/2)+'px';}
+var sliderResize = ()=>{
+    slider.style.height=(slider.clientWidth/(1020/590))+'px';
+    slideContainers.forEach((it)=>{it.style="transform: scale("+(slider.clientWidth/1020)+");"});
+}
 sliderResize();
 window.onresize=(sliderResize);
 

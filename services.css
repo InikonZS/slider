@@ -1,0 +1,126 @@
+h3{
+    margin: 0px 0px;
+    font-size:13pt;
+    line-height:11pt;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+.ico{
+    position: absolute;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+    top: 0px;
+    left: 12px;
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: center;
+    
+}
+.services_describe{
+    padding: 5px 10px;
+}
+.services_wrapper{
+    padding: 49px 30px 26px 30px;
+    border-bottom-color: #ffffff;
+    border-bottom-width: 8px;
+    border-bottom-style: solid;
+    background-color: #f2f2f2;
+    color:#666d89;
+}
+.services_grid{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    width: 100%;
+    align-items: flex-start;
+    padding: 39px 0px 0px 0px;
+    box-sizing: border-box;
+    text-align: justify;
+}
+.services_grid_item{
+    position: relative;
+    min-height: 122px;
+}
+@media screen and (min-width:768px){
+    .services_grid_item{
+        width: calc(33.3333% - 20px);
+        padding: 0px 10px;
+    }
+}
+@media screen and (min-width:456px) and (max-width:767px){
+    .services_grid_item{
+        width: calc(50% - 20px);
+        padding: 0px 10px;
+    }
+}
+@media screen and (max-width:455px){
+    .services_grid_item{
+        width: calc(100% - 20px);
+        padding: 0px 10px;
+    }
+}
+.services_item_describe{
+    padding-left: 80px;
+    /*background-image: url(assets/pics/pen.png);
+    background-repeat: no-repeat;
+    background-position-y: 20px;
+    background-position-x: 14px;*/
+    box-sizing: border-box;
+    width: 100%;
+}
+.pic-pen{
+    background-image: url(assets/pics/pen.png);
+}
+.pic-bulb{
+    background-image: url(assets/pics/bulb.png);
+}
+.pic-bubble{
+    background-image: url(assets/pics/bubble.png);
+}
+.pic-phone{
+    background-image: url(assets/pics/phone.png);
+}
+.pic-heart{
+    background-image: url(assets/pics/heart.png);
+}
+.pic-star{
+    background-image: url(assets/pics/star.png);
+}
+.soc-fb{
+    background-image: url(assets/soc/facebook.png);
+}
+.soc-in{
+    background-image: url(assets/soc/linkedin.png);
+}
+.soc-go{
+    background-image: url(assets/soc/google.png);
+}
+.soc-tw{
+    background-image: url(assets/soc/twitter.png);
+}
+.burger{
+    display:none;
+    width: 55px;
+    height: 55px;
+    padding: 10px 10px 10px 10px;
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: center;
+    background-image: url(assets/mobile/burger.png);
+}
+@media screen and (max-width:455px){
+    .burger{
+        display: flex;
+    }
+    .logo{
+        display:flex;
+        justify-content: center;
+        flex-grow: 2;
+    }
+    .header_menu{
+        display:none;
+    }
+}
