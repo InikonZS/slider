@@ -44,19 +44,19 @@ h3{
     position: relative;
     min-height: 122px;
 }
-@media screen and (min-width:768px){
+@media screen and (min-width:1020px){
     .services_grid_item{
         width: calc(33.3333% - 20px);
         padding: 0px 10px;
     }
 }
-@media screen and (min-width:456px) and (max-width:767px){
+@media screen and (min-width:768px) and (max-width:1019px){
     .services_grid_item{
         width: calc(50% - 20px);
         padding: 0px 10px;
     }
 }
-@media screen and (max-width:455px){
+@media screen and (max-width:767px){
     .services_grid_item{
         width: calc(100% - 20px);
         padding: 0px 10px;
@@ -122,7 +122,7 @@ h3{
     transition-property: transform;
 
 }
-@media screen and (max-width:455px){
+@media screen and (max-width:767px){
     .burger{
         display: flex;
     }

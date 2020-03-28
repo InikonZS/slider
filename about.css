@@ -62,19 +62,19 @@
     display:flex;
     flex-direction: column;
 }
-@media screen and (min-width:768px){
+@media screen and (min-width:1020px){
     .about_grid_item{
         width: calc(33.3333% - 20px);
         padding: 10px;
     }
 }
-@media screen and (min-width:456px) and (max-width:767px){
+@media screen and (min-width:768px) and (max-width:1019px){
     .about_grid_item{
         width: calc(33.3333% - 20px);
         padding: 10px;
     }
 }
-@media screen and (max-width:455px){
+@media screen and (max-width:767px){
     .about_grid_item{
         width: calc(100% - 20px);
         padding: 10px;
